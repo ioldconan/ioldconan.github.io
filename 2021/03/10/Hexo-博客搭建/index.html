@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>使用 Hexo 搭建属于自己的github.io | 盒伙人</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="在你逛技术贴的时候,你是否有看到过xxx.github.io的站点,你是否会好奇,这些技术大佬不仅精通本职工作的语言,还精通Web前端?今天我们就自己手搭一个属于自己的git.io的站点,用来记录自己的博文.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Hexo 搭建属于自己的github.io">
+<meta property="og:url" content="https://ioldconan.github.io/ioldconan.github.io/2021/03/10/Hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="盒伙人">
+<meta property="og:description" content="在你逛技术贴的时候,你是否有看到过xxx.github.io的站点,你是否会好奇,这些技术大佬不仅精通本职工作的语言,还精通Web前端?今天我们就自己手搭一个属于自己的git.io的站点,用来记录自己的博文.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ioldconan.github.io/git1.png">
+<meta property="og:image" content="https://ioldconan.github.io/git2.png">
+<meta property="article:published_time" content="2021-03-10T06:50:51.000Z">
+<meta property="article:modified_time" content="2021-03-11T15:19:09.354Z">
+<meta property="article:author" content="HHR&amp;KTB&amp;HHT">
+<meta property="article:tag" content="other">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ioldconan.github.io/git1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="盒伙人" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">盒伙人</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">晴耕雨读</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ioldconan.github.io/ioldconan.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Hexo-博客搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/10/Hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time class="dt-published" datetime="2021-03-10T06:50:51.000Z" itemprop="datePublished">2021-03-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/other/">other</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      使用 Hexo 搭建属于自己的github.io
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在你逛技术贴的时候,你是否有看到过xxx.github.io的站点,你是否会好奇,这些技术大佬不仅精通本职工作的语言,还精通Web前端?今天我们就自己手搭一个属于自己的git.io的站点,用来记录自己的博文.</p>
+<span id="more"></span>
+
+<p>准备工作,首先你需要安装最新的 <strong>Node.js</strong> 和 <strong>Git</strong>;</p>
+<p>这里我就默认你本地环境以及安装好这些了.</p>
+<p>下面我们正式开始</p>
+<h2 id="创建自己的github-io"><a href="#创建自己的github-io" class="headerlink" title="创建自己的github.io"></a>创建自己的github.io</h2><p>创建自己的<strong>xx.github.io</strong>,值得注意的是项目名称是:你github账号 + github.io;</p>
+<h3 id="设置主题"><a href="#设置主题" class="headerlink" title="设置主题"></a>设置主题</h3><p>选择你的github.io仓库,进入设置界面. 设置你喜欢的主题.</p>
+<p><img src="/git1.png" alt="git1"></p>
+<p>设置完成之后,需要你生成一次commit;</p>
+<h3 id="验证效果"><a href="#验证效果" class="headerlink" title="验证效果"></a>验证效果</h3><p>执行完成上面的操作,你就可以验证下GitHub Page的效果了.</p>
+<p><img src="/git2.png" alt="git2"></p>
+<h2 id="搭建Hexo环境"><a href="#搭建Hexo环境" class="headerlink" title="搭建Hexo环境"></a>搭建Hexo环境</h2><h3 id="安装Hexo-cli-客户端"><a href="#安装Hexo-cli-客户端" class="headerlink" title="安装Hexo-cli 客户端"></a>安装Hexo-cli 客户端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="验证Hexo-客户端"><a href="#验证Hexo-客户端" class="headerlink" title="验证Hexo 客户端"></a>验证Hexo 客户端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+
+<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><p>选择你一个文件夹作为你的站点,这个文件夹最好是使用github管理起来,并将仓库设置为私有的仓库.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"></span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line"></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>执行完上述操作之后,你就拥有一个默认的站点了,你可以试着运行下,看是否初始化成功.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>执行<strong>hexo s</strong>命令之后,你就可以在浏览器输入<strong>localhost:4000</strong>访问站点了.</p>
+<h3 id="修改配置文件-config-yml"><a href="#修改配置文件-config-yml" class="headerlink" title="修改配置文件_config.yml"></a>修改配置文件_config.yml</h3><p>hexo 初始化之后,生成的站点都是默认设置, 你可以修改 <strong>_config.yml</strong>文件来定制化.</p>
+<p>比如下面的配置:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 老柯南</span><br><span class="line">subtitle: 晴耕雨读</span><br><span class="line">description: 告诉自己可以做好，即使是新事物，也一样可以做好</span><br><span class="line">keywords: IT &amp; LIFE</span><br><span class="line">author: iconan</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="将站点部署到github-io"><a href="#将站点部署到github-io" class="headerlink" title="将站点部署到github.io"></a>将站点部署到github.io</h2><p>想要将站点部署到GitHub,我们还需要给hexo安装点插件.</p>
+<h3 id="安装-hexo-deployer-git"><a href="#安装-hexo-deployer-git" class="headerlink" title="安装 hexo-deployer-git"></a>安装 hexo-deployer-git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改-config-yml部署地址"><a href="#修改-config-yml部署地址" class="headerlink" title="修改_config.yml部署地址"></a>修改_config.yml部署地址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: https:&#x2F;&#x2F;ioldconan.github.io&#x2F;</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;ioldconan&#x2F;ioldconan.github.io.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="部署到GitHub-io"><a href="#部署到GitHub-io" class="headerlink" title="部署到GitHub.io"></a>部署到GitHub.io</h3><p>上面设置好之后,就可以将站点部署到GitHub.io了.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>等待一会之后,你就可以直接访问你hexo 主题的GitHub站点了.</p>
+<h3 id="设置hexo-主题"><a href="#设置hexo-主题" class="headerlink" title="设置hexo 主题"></a>设置hexo 主题</h3><p>默认的主题看起来不是那么悦目,接下来,我们来给站点设置主题</p>
+<h4 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h4><p>我们可以从<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo主题</a>商店选择主题.</p>
+<p>下载你想要的主题,并将主题文件夹存放在 <strong>/theme目录下</strong></p>
+<h4 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: hexo-theme-next</span><br></pre></td></tr></table></figure>
+
+<p>完了之后再部署下,你就可以看到全新的站点了.</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="上传图片"><a href="#上传图片" class="headerlink" title="上传图片"></a>上传图片</h4><p>如果想上传自己的图片,我们也需要安装一个图片的插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="只展示部分内容"><a href="#只展示部分内容" class="headerlink" title="只展示部分内容"></a>只展示部分内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">需要显示的内容</span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">点击进入详情页面才会展示的内容.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="hexo-命令"><a href="#hexo-命令" class="headerlink" title="hexo 命令"></a>hexo 命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo new post fileName   新建发布文件</span><br><span class="line"></span><br><span class="line">hexo s                   本地部署</span><br><span class="line"></span><br><span class="line">hexo clean               clean</span><br><span class="line"></span><br><span class="line">hexo g -d                部署到远端</span><br><span class="line"></span><br><span class="line">hexo v                   hexo 版本信息</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ioldconan.github.io/ioldconan.github.io/2021/03/10/Hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" data-id="ckm50pjqr00009auv4l1aa54i" data-title="使用 Hexo 搭建属于自己的github.io" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/" rel="tag">other</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/11/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/other/">other</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/other/" style="font-size: 10px;">other</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/10/Hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">使用 Hexo 搭建属于自己的github.io</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 HHR&amp;KTB&amp;HHT<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
